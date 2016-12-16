@@ -1,0 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Bugly" "${PODS_ROOT}/JSPatchPlatform"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bugly" "${PODS_ROOT}/Headers/Public/JSPatch" "${PODS_ROOT}/Headers/Public/JSPatchPlatform"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JSPatch"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bugly" -isystem "${PODS_ROOT}/Headers/Public/JSPatch" -isystem "${PODS_ROOT}/Headers/Public/JSPatchPlatform"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"JSPatch" -l"c++" -l"z" -framework "Bugly" -framework "Foundation" -framework "JSPatchPlatform" -framework "JavaScriptCore" -framework "Security" -framework "SystemConfiguration" -weak_framework "JavaScriptCore"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

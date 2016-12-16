@@ -1,0 +1,22 @@
+PODS:
+  - Bugly (2.4.2)
+  - JSPatch (1.1.2):
+    - JSPatch/Core (= 1.1.2)
+  - JSPatch/Core (1.1.2)
+  - JSPatchPlatform (1.6.5):
+    - JSPatchPlatform/Core (= 1.6.5)
+  - JSPatchPlatform/Core (1.6.5):
+    - JSPatch
+
+DEPENDENCIES:
+  - Bugly
+  - JSPatchPlatform (~> 1.6.2)
+
+SPEC CHECKSUMS:
+  Bugly: b09cd3c7e54048a0e079be88a7a99610f14eab8f
+  JSPatch: 741205ebb2e2238c223a436e4c8cf75cf40a345f
+  JSPatchPlatform: 45e5a0b2d0a229baec33cbcf7dd3fdb0630edbe8
+
+PODFILE CHECKSUM: 2845a99f73cd0edea6e7722186f359ef72cac8cd
+
+COCOAPODS: 1.0.1

@@ -13,6 +13,8 @@
 		225345FD1E03C63D00C6A56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225345FB1E03C63D00C6A56C /* LaunchScreen.storyboard */; };
 		225346081E03C63E00C6A56C /* EffectiveCodesDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225346071E03C63E00C6A56C /* EffectiveCodesDemoTests.m */; };
 		225346131E03C63E00C6A56C /* EffectiveCodesDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225346121E03C63E00C6A56C /* EffectiveCodesDemoUITests.m */; };
+		225346211E03DF8100C6A56C /* libJSPatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 225346201E03DF8100C6A56C /* libJSPatch.a */; };
+		90370344116350A2055A0724 /* libPods-EffectiveCodesDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA088093B7ADABEFEFF2151 /* libPods-EffectiveCodesDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		2253460E1E03C63E00C6A56C /* EffectiveCodesDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectiveCodesDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225346121E03C63E00C6A56C /* EffectiveCodesDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectiveCodesDemoUITests.m; sourceTree = "<group>"; };
 		225346141E03C63E00C6A56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225346201E03DF8100C6A56C /* libJSPatch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSPatch.a; path = "../../../../../Library/Developer/Xcode/DerivedData/EffectiveCodesDemo-adajtlejdvummoenjhhmojmfqnnt/Build/Products/Debug-iphonesimulator/JSPatch/libJSPatch.a"; sourceTree = "<group>"; };
+		897CFF365E42366069B92A50 /* Pods-EffectiveCodesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffectiveCodesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8D4ADE9B1614F5F7D6C0673B /* Pods-EffectiveCodesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffectiveCodesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DFA088093B7ADABEFEFF2151 /* libPods-EffectiveCodesDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EffectiveCodesDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225346211E03DF8100C6A56C /* libJSPatch.a in Frameworks */,
+				90370344116350A2055A0724 /* libPods-EffectiveCodesDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1904161B48EB1171F2737CBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				897CFF365E42366069B92A50 /* Pods-EffectiveCodesDemo.debug.xcconfig */,
+				8D4ADE9B1614F5F7D6C0673B /* Pods-EffectiveCodesDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		225345E11E03C63D00C6A56C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +97,8 @@
 				225346061E03C63E00C6A56C /* EffectiveCodesDemoTests */,
 				225346111E03C63E00C6A56C /* EffectiveCodesDemoUITests */,
 				225345EB1E03C63D00C6A56C /* Products */,
+				1904161B48EB1171F2737CBB /* Pods */,
+				58ECF22B7646B9145E4BAE5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +151,15 @@
 			path = EffectiveCodesDemoUITests;
 			sourceTree = "<group>";
 		};
+		58ECF22B7646B9145E4BAE5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225346201E03DF8100C6A56C /* libJSPatch.a */,
+				DFA088093B7ADABEFEFF2151 /* libPods-EffectiveCodesDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 225346171E03C63E00C6A56C /* Build configuration list for PBXNativeTarget "EffectiveCodesDemo" */;
 			buildPhases = (
+				8BF50AFFD19DDA36FB734F9F /* [CP] Check Pods Manifest.lock */,
 				225345E61E03C63D00C6A56C /* Sources */,
 				225345E71E03C63D00C6A56C /* Frameworks */,
 				225345E81E03C63D00C6A56C /* Resources */,
+				2BD668A47981264F8291F7F6 /* [CP] Embed Pods Frameworks */,
+				1DC75F7206C36B86D22F7C2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +289,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DC75F7206C36B86D22F7C2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BD668A47981264F8291F7F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BF50AFFD19DDA36FB734F9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		225345E61E03C63D00C6A56C /* Sources */ = {
@@ -402,10 +481,12 @@
 		};
 		225346181E03C63E00C6A56C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897CFF365E42366069B92A50 /* Pods-EffectiveCodesDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EffectiveCodesDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sam.samPersonal.EffectiveCodesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,10 +495,12 @@
 		};
 		225346191E03C63E00C6A56C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D4ADE9B1614F5F7D6C0673B /* Pods-EffectiveCodesDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EffectiveCodesDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sam.samPersonal.EffectiveCodesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,6 +572,7 @@
 				225346191E03C63E00C6A56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2253461A1E03C63E00C6A56C /* Build configuration list for PBXNativeTarget "EffectiveCodesDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +581,7 @@
 				2253461C1E03C63E00C6A56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2253461D1E03C63E00C6A56C /* Build configuration list for PBXNativeTarget "EffectiveCodesDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +590,7 @@
 				2253461F1E03C63E00C6A56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

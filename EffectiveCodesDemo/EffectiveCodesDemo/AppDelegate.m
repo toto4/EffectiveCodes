@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <Bugly/Bugly.h>
+#import <JSPatchPlatform/JSPatch.h>
+
+NSString *const kJSPatchAppKey = @"32a60f458dd928c4";
+NSString *const kBublyAppId = @"688fed51d9";
+
 
 @interface AppDelegate ()
 
@@ -14,10 +20,11 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    void sam_setupConfigApp();
+    sam_setupConfigApp();
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -60,6 +67,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+#pragma mark - 
+
+void sam_setupConfigApp()
+{
+    // JSPatch
+    [JSPatch startWithAppKey:kJSPatchAppKey];
+    [JSPatch sync];
+    
+    // Bugly
+    [Bugly startWithAppId:kBublyAppId];
+    
+}
+
+
+
 
 
 @end
