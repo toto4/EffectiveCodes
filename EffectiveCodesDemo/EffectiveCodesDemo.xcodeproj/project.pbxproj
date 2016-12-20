@@ -14,6 +14,7 @@
 		225346081E03C63E00C6A56C /* EffectiveCodesDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225346071E03C63E00C6A56C /* EffectiveCodesDemoTests.m */; };
 		225346131E03C63E00C6A56C /* EffectiveCodesDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225346121E03C63E00C6A56C /* EffectiveCodesDemoUITests.m */; };
 		225346211E03DF8100C6A56C /* libJSPatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 225346201E03DF8100C6A56C /* libJSPatch.a */; };
+		225346261E06CF7800C6A56C /* SAMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 225346251E06CF7800C6A56C /* SAMDBHelper.m */; };
 		90370344116350A2055A0724 /* libPods-EffectiveCodesDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA088093B7ADABEFEFF2151 /* libPods-EffectiveCodesDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		225346121E03C63E00C6A56C /* EffectiveCodesDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectiveCodesDemoUITests.m; sourceTree = "<group>"; };
 		225346141E03C63E00C6A56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		225346201E03DF8100C6A56C /* libJSPatch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSPatch.a; path = "../../../../../Library/Developer/Xcode/DerivedData/EffectiveCodesDemo-adajtlejdvummoenjhhmojmfqnnt/Build/Products/Debug-iphonesimulator/JSPatch/libJSPatch.a"; sourceTree = "<group>"; };
+		225346241E06CF7800C6A56C /* SAMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMDBHelper.h; sourceTree = "<group>"; };
+		225346251E06CF7800C6A56C /* SAMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMDBHelper.m; sourceTree = "<group>"; };
 		897CFF365E42366069B92A50 /* Pods-EffectiveCodesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffectiveCodesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8D4ADE9B1614F5F7D6C0673B /* Pods-EffectiveCodesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffectiveCodesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EffectiveCodesDemo/Pods-EffectiveCodesDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DFA088093B7ADABEFEFF2151 /* libPods-EffectiveCodesDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EffectiveCodesDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,9 @@
 		225345EC1E03C63D00C6A56C /* EffectiveCodesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				225346271E06D31400C6A56C /* Main */,
+				225346231E06CECB00C6A56C /* Tools */,
+				225346221E06CEBA00C6A56C /* Modules */,
 				225345F01E03C63D00C6A56C /* AppDelegate.h */,
 				225345F11E03C63D00C6A56C /* AppDelegate.m */,
 				225345F91E03C63D00C6A56C /* Assets.xcassets */,
@@ -149,6 +155,29 @@
 				225346141E03C63E00C6A56C /* Info.plist */,
 			);
 			path = EffectiveCodesDemoUITests;
+			sourceTree = "<group>";
+		};
+		225346221E06CEBA00C6A56C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		225346231E06CECB00C6A56C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				225346241E06CF7800C6A56C /* SAMDBHelper.h */,
+				225346251E06CF7800C6A56C /* SAMDBHelper.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		225346271E06D31400C6A56C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		58ECF22B7646B9145E4BAE5B /* Frameworks */ = {
@@ -344,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225345F21E03C63D00C6A56C /* AppDelegate.m in Sources */,
+				225346261E06CF7800C6A56C /* SAMDBHelper.m in Sources */,
 				225345EF1E03C63D00C6A56C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
