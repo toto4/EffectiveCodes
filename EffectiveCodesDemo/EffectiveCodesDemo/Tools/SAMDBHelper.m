@@ -11,9 +11,6 @@
 #import "FMDB.h"
 #import <objc/runtime.h>
 
-FMDatabaseQueue * privateDBQueue();
-FMDatabaseQueue * publicDBQueue() ;
-
 
 static const void *kUserDBQueueKey = &kUserDBQueueKey;
 
@@ -94,14 +91,76 @@ BOOL dbBooleanReverse(NSInteger i) {
     return i == 0 ? NO : YES;
 }
 
-FMDatabaseQueue * privateDBQueue()
+
+#pragma mark --- db helper
+
+BOOL sam_updateUsingTransactionInDataBase(FMDatabaseQueue *dbQueue,NSString *sql)
 {
-    return [UIApplication sharedApplication].userDBQueue;
-}
-FMDatabaseQueue * publicDBQueue()
-{
-    return [UIApplication sharedApplication].publicDBQueue;
+
+    if(0 == sql.length) {
+        return NO;
+    }
+    
+    __block BOOL isSuccess = YES;
+    [dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        BOOL sucess = [db executeUpdate:sql];
+        if(!sucess) {
+            isSuccess = NO;
+            *rollback = YES;    // 没有成功，回滚
+        }
+    }];
+    
+    return isSuccess;
 }
 
+BOOL sam_updateArrayUsingTransactionInDataBase(FMDatabaseQueue *dbQueue,NSArray<NSString *> *arrayOfSql)
+{
+    if(nil == arrayOfSql || 0 == arrayOfSql.count) {
+        return NO;
+    }
+    
+    __block BOOL isSuccess = YES;
+    [dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        BOOL success = NO;
+        for(NSString *sql in arrayOfSql) {
+            if(sql != nil && sql.length) {
+                success = [db executeUpdate:sql];
+                if(!success) {
+                    break;
+                }
+            }
+        }
+        
+        if(!success) {
+            isSuccess = NO;
+            *rollback = YES;
+        }
+    }];
+    
+    return isSuccess;
+}
+
+BOOL sam_queryResultInDataBase(FMDatabaseQueue *dbQueue,NSString *sql, void(^resultBlock)(FMResultSet *resultSet))
+{
+    
+    if(0 == sql.length) {
+        return NO;
+    }
+    
+    __block FMResultSet *resultSet = nil;
+    __block BOOL success = YES;
+    [dbQueue inDatabase:^(FMDatabase *db) {
+        resultSet = [db executeQuery:sql];
+        if(resultSet == nil) {  // 发生错误
+            success = NO;
+            return;
+        }
+        
+        resultBlock(resultSet);
+        [resultSet close];
+    }];
+    
+    return success;
+}
 
 

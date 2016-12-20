@@ -8,7 +8,41 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+
 @class FMResultSet,FMDatabaseQueue;
+
+
+
+BOOL isDBStringEmpty(NSString *DBString);
+
+
+/** nil 转 @"" */
+NSString * dbStringConverter(NSString *string);
+/** @"" 转 nil */
+NSString * dbStringReverse(NSString *string);
+
+// YES 转 1；NO 转 0
+NSInteger dbBooleanConverter(BOOL boolean);
+
+// 1 转 YES；0 转 NO
+BOOL dbBooleanReverse(NSInteger i);
+
+
+#pragma mark --- db helper
+/** 开启事物执行update操作 */
+BOOL sam_updateUsingTransactionInDataBase(FMDatabaseQueue *dbQueue,NSString *sql);
+BOOL sam_updateArrayUsingTransactionInDataBase(FMDatabaseQueue *dbQueue,NSArray<NSString *> *arrayOfSql);
+
+/** query */
+BOOL sam_queryResultInDataBase(FMDatabaseQueue *dbQueue,NSString *sql, void(^resultBlock)(FMResultSet *resultSet));
+
+
+
+
+#pragma mark - DBQueue Extension
+
 
 @interface UIApplication (SAMDBExtension)
 
@@ -31,21 +65,5 @@
 @end
 
 
-
-
-BOOL isDBStringEmpty(NSString *DBString);
-
-
-
-/** nil 转 @"" */
-NSString * dbStringConverter(NSString *string);
-/** @"" 转 nil */
-NSString * dbStringReverse(NSString *string);
-
-// YES 转 1；NO 转 0
-NSInteger dbBooleanConverter(BOOL boolean);
-
-// 1 转 YES；0 转 NO
-BOOL dbBooleanReverse(NSInteger i);
 
 
