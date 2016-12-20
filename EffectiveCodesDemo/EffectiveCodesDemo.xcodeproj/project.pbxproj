@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2204A2A41E09323900A3D28A /* UIView+SAMViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */; };
 		225345EF1E03C63D00C6A56C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225345EE1E03C63D00C6A56C /* main.m */; };
 		225345F21E03C63D00C6A56C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225345F11E03C63D00C6A56C /* AppDelegate.m */; };
 		225345FA1E03C63D00C6A56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225345F91E03C63D00C6A56C /* Assets.xcassets */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2204A2A21E09323900A3D28A /* UIView+SAMViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAMViewCategory.h"; sourceTree = "<group>"; };
+		2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAMViewCategory.m"; sourceTree = "<group>"; };
 		225345EA1E03C63D00C6A56C /* EffectiveCodesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveCodesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225345EE1E03C63D00C6A56C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		225345F01E03C63D00C6A56C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +94,15 @@
 				8D4ADE9B1614F5F7D6C0673B /* Pods-EffectiveCodesDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2204A29F1E09313600A3D28A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2A21E09323900A3D28A /* UIView+SAMViewCategory.h */,
+				2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		225345E11E03C63D00C6A56C = {
@@ -167,6 +179,7 @@
 		225346231E06CECB00C6A56C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2204A29F1E09313600A3D28A /* Category */,
 				225346241E06CF7800C6A56C /* SAMDBHelper.h */,
 				225346251E06CF7800C6A56C /* SAMDBHelper.m */,
 			);
@@ -373,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225345F21E03C63D00C6A56C /* AppDelegate.m in Sources */,
+				2204A2A41E09323900A3D28A /* UIView+SAMViewCategory.m in Sources */,
 				225346261E06CF7800C6A56C /* SAMDBHelper.m in Sources */,
 				225345EF1E03C63D00C6A56C /* main.m in Sources */,
 			);
