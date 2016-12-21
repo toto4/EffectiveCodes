@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2204A2A41E09323900A3D28A /* UIView+SAMViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */; };
+		221038131E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 221038121E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.m */; };
+		221038161E0A22330043212F /* NSObject+SAMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 221038151E0A22330043212F /* NSObject+SAMExtension.m */; };
 		225345EF1E03C63D00C6A56C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225345EE1E03C63D00C6A56C /* main.m */; };
 		225345F21E03C63D00C6A56C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225345F11E03C63D00C6A56C /* AppDelegate.m */; };
 		225345FA1E03C63D00C6A56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225345F91E03C63D00C6A56C /* Assets.xcassets */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		2204A2A21E09323900A3D28A /* UIView+SAMViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAMViewCategory.h"; sourceTree = "<group>"; };
 		2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAMViewCategory.m"; sourceTree = "<group>"; };
+		221038111E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAMGestureRecognizerAction.h"; sourceTree = "<group>"; };
+		221038121E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAMGestureRecognizerAction.m"; sourceTree = "<group>"; };
+		221038141E0A22330043212F /* NSObject+SAMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SAMExtension.h"; sourceTree = "<group>"; };
+		221038151E0A22330043212F /* NSObject+SAMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SAMExtension.m"; sourceTree = "<group>"; };
 		225345EA1E03C63D00C6A56C /* EffectiveCodesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveCodesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225345EE1E03C63D00C6A56C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		225345F01E03C63D00C6A56C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +107,10 @@
 			children = (
 				2204A2A21E09323900A3D28A /* UIView+SAMViewCategory.h */,
 				2204A2A31E09323900A3D28A /* UIView+SAMViewCategory.m */,
+				221038111E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.h */,
+				221038121E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.m */,
+				221038141E0A22330043212F /* NSObject+SAMExtension.h */,
+				221038151E0A22330043212F /* NSObject+SAMExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -385,6 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221038131E0A1EC30043212F /* UIView+SAMGestureRecognizerAction.m in Sources */,
+				221038161E0A22330043212F /* NSObject+SAMExtension.m in Sources */,
 				225345F21E03C63D00C6A56C /* AppDelegate.m in Sources */,
 				2204A2A41E09323900A3D28A /* UIView+SAMViewCategory.m in Sources */,
 				225346261E06CF7800C6A56C /* SAMDBHelper.m in Sources */,
